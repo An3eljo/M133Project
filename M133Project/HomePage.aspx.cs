@@ -9,7 +9,7 @@ namespace M133Project
 {
     public partial class HomePage : Page
     {
-        
+        public static 
         protected void Page_Load(object sender, EventArgs e)
         {
 

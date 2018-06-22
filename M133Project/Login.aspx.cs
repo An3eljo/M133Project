@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -17,9 +18,13 @@ namespace M133Project
         protected void Submit_OnClick(object sender, EventArgs e)
         {
             var username = TextBoxUsername.Text;
-            Session.Add("UserName", TextBoxUsername.Text);
-            Session.Add("UserEmail", TextBoxEmail.Text);
             Response.Redirect("About.aspx");
+        }
+
+        [WebMethod]
+        public static string OnLoginClick(string name)
+        {
+            return "hello" + name;
         }
     }
     
