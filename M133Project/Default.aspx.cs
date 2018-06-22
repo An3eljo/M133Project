@@ -13,15 +13,20 @@ namespace M133Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "andrischool.database.windows.net,1433";
-            builder.UserID = "andrijoos";
-            builder.Password = "Andrielia99";
-
-            using (var connection = new SqlConnection(builder.ConnectionString))
+            using (var connection = new MyDbEntities)
             {
-                connection.Open();
+                
             }
+
+            //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            //builder.DataSource = "andrischool.database.windows.net,1433";
+            //builder.UserID = "andrijoos";
+            //builder.Password = "Andrielia99";
+
+            //using (var connection = new SqlConnection(builder.ConnectionString))
+            //{
+            //    connection.Open();
+            //}
 
             //MySqlConnection connection = new MySqlConnection("server=localhost;Port=3306;database=test0;uid=root;SslMode=0;password=");
 
