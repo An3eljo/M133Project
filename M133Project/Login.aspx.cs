@@ -19,6 +19,7 @@ namespace M133Project
             var username = TextBoxUsername.Text;
             Session.Add("UserName", TextBoxUsername.Text);
             Session.Add("UserEmail", TextBoxEmail.Text);
+            Response.Redirect("About.aspx");
         }
     }
     
