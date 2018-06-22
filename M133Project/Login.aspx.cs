@@ -18,8 +18,8 @@ namespace M133Project
         {
             Session.Add("UserName", TextBoxNutzername.Text);
             Session.Add("UserEmail", TextBoxEmail.Text);
+            Response.Redirect("About.aspx");
         }
-        Response.Redirect("About.aspx");
     }
     
 }

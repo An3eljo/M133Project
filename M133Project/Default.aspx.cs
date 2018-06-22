@@ -31,5 +31,22 @@ namespace M133Project
             ////close the connection
             //connection.Close();
         }
+
+        //protected void OnClick(object sender, EventArgs e)
+        //{
+        //    Test.Text = "hallo";
+        //}
+
+        protected void btnHelloWorld_Click(object sender, EventArgs e)
+        {
+            lblHelloWorld.Text = "Hello, world - this is a fresh message from ASP.NET AJAX! The time right now is: " + DateTime.Now.ToLongTimeString();
+        }
+
+        [System.Web.Services.WebMethod]
+        public static string GetCurrentTime(string name)
+        {
+            return "Hello " + name + Environment.NewLine + "The Current Time is: "
+                   + DateTime.Now.ToString();
+        }
     }
 }
