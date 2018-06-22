@@ -16,7 +16,8 @@ namespace M133Project
 
         protected void Submit_OnClick(object sender, EventArgs e)
         {
-            Session.Add("UserName", TextBoxNutzername.Text);
+            var username = TextBoxUsername.Text;
+            Session.Add("UserName", TextBoxUsername.Text);
             Session.Add("UserEmail", TextBoxEmail.Text);
             Response.Redirect("About.aspx");
         }
