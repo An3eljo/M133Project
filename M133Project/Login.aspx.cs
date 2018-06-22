@@ -20,7 +20,6 @@ namespace M133Project
             Session.Add("UserName", TextBoxUsername.Text);
             Session.Add("UserEmail", TextBoxEmail.Text);
         }
-        Response.Redirect("About.aspx");
     }
     
 }
