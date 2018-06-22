@@ -11,7 +11,15 @@ namespace M133Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.Timeout = 10;
         }
+
+        protected void Submit_OnClick(object sender, EventArgs e)
+        {
+            Session.Add("UserName", TextBoxNutzername.Text);
+            Session.Add("UserEmail", TextBoxEmail.Text);
+        }
+        Response.Redirect("About.aspx");
     }
+    
 }
