@@ -14,9 +14,9 @@ namespace M133Project
         public List<Product> Products;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Products = new List<Product>();
-            SetUp();
-            
+            var db = new M133_GoInternationalEntities1();
+            Products = db.Product.ToList();
+            var t = 0;
 
 
             //var product = new Product();
