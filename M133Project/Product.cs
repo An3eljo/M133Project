@@ -21,7 +21,5 @@ namespace M133Project
         public float Quantity { get; set; }
         public int Seller { get; set; }
         public byte[] AdditionTime { get; set; }
-    
-        public virtual User User { get; set; }
     }
 }

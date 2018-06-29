@@ -11,12 +11,35 @@ namespace M133Project
 {
     public partial class _Default : Page
     {
+        public List<Product> Products;
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (var connection = new MyDbEntities)
-            {
-                
-            }
+            Products = new List<Product>();
+            SetUp();
+            
+
+
+            //var product = new Product();
+
+            //var user = new User();
+            //user.Product = new List<Product>();
+            //user.Username = "user1";
+            //user.Password = "user1";
+            //product.Id = 1;
+
+            //product.Description = "description1";
+            //product.Id = 1;
+            //product.Price = 24.5F;
+            //product.Quantity = 586.78F;
+            //product.Seller = 1;
+            //product.Name = "Luan";
+
+            //user.Product.Add(product);
+
+            //var db = new M133_GoInternationalEntities1();
+            //db.Product.Add(product);
+            //db.User.Add(user);
+            //db.SaveChanges();   
 
             //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             //builder.DataSource = "andrischool.database.windows.net,1433";
@@ -42,16 +65,21 @@ namespace M133Project
         //    Test.Text = "hallo";
         //}
 
-        protected void btnHelloWorld_Click(object sender, EventArgs e)
-        {
-            lblHelloWorld.Text = "Hello, world - this is a fresh message from ASP.NET AJAX! The time right now is: " + DateTime.Now.ToLongTimeString();
-        }
 
-        [System.Web.Services.WebMethod]
-        public static string GetCurrentTime(string name)
+        //[System.Web.Services.WebMethod]
+        //public static string GetCurrentTime(string name)
+        //{
+        //    return "Hello " + name + Environment.NewLine + "The Current Time is: "
+        //           + DateTime.Now.ToString();
+        //}
+
+        private void SetUp()
         {
-            return "Hello " + name + Environment.NewLine + "The Current Time is: "
-                   + DateTime.Now.ToString();
+            var db = new M133_GoInternationalEntities1();
+            foreach (var product in db.Product)
+            {
+                Products.Add(product);
+            }
         }
     }
 }

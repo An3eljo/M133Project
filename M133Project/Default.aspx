@@ -1,16 +1,21 @@
 ﻿<%@ Page Title="hallooosfjapsjfpaj" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="M133Project._Default" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
-    <form id="form1" runat="server">
-        <asp:ScriptManager ID="MainScriptManager" runat="server" />
-        <asp:UpdatePanel ID="pnlHelloWorld" runat="server">
-            <ContentTemplate>
-                <asp:Label runat="server" ID="lblHelloWorld" Text="Click the button!" />
-                <br /><br />
-                <asp:Button runat="server" ID="btnHelloWorld" OnClick="btnHelloWorld_Click" Text="Update label!" />
-            </ContentTemplate>
-        </asp:UpdatePanel>
-    </form>
+    
+    
+    
+    
+    
+
+    
+    <%--<asp:ScriptManager ID="MainScriptManager" runat="server" />
+    <asp:UpdatePanel ID="pnlHelloWorld" runat="server">
+        <ContentTemplate>
+            <asp:Label runat="server" ID="lblHelloWorld" Text="Click the button!" />
+            <br /><br />
+            <asp:Button runat="server" ID="btnHelloWorld" Text="Update label!" />
+        </ContentTemplate>
+    </asp:UpdatePanel>--%>
 
    <%-- <asp:TextBox runat="server" ID="Test"></asp:TextBox>
     <input type="button" onclick="ShowCurrentTime"/>

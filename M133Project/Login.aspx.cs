@@ -17,8 +17,24 @@ namespace M133Project
 
         protected void Submit_OnClick(object sender, EventArgs e)
         {
+            var db = new M133_GoInternationalEntities1();
+            string output = null;
             var username = TextBoxUsername.Text;
-            Response.Redirect("About.aspx");
+            var password = TextBoxPassword.Text;
+            try
+            {
+                var user = db.User.First(use => use.Username == username);
+                if (user.Password != password)
+                {
+                    //throw;
+                }
+
+                Session.Add("username", user);
+            }
+            catch (Exception )
+            {
+                
+            }
         }
 
         [WebMethod]
