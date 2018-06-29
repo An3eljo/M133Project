@@ -1,4 +1,4 @@
-﻿<%@ Page Title="hallooosfjapsjfpaj" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="M133Project._Default" %>
+﻿<%@ Page Title="Wilkommen" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="M133Project._Default" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
     
@@ -45,4 +45,19 @@
             
         }
     </script>--%>
+   <br />
+   <h1><b>Silkroad</b></h1>
+   <p>Unsere Produkte:</p>
+
+   <table>
+        <% 
+            foreach (var i in Products)
+            {
+                %>
+                    <tr><th>Name</th><th>Preis</th><th>Menge</th></tr>
+                    <tr><td><%= i.Name%></td><td><%= i.Price %></td> <td><%= i.Quantity %></td></tr>
+                <% 
+            }
+        %>
+    </table>
 </asp:Content>
