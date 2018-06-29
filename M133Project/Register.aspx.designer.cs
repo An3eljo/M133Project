@@ -31,12 +31,30 @@ namespace M133Project {
         protected global::System.Web.UI.WebControls.TextBox TextBoxPassword;
         
         /// <summary>
-        /// LabelError control.
+        /// TextBoxWalletAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelError;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxWalletAddress;
+        
+        /// <summary>
+        /// LabeErrorEmptyFields control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabeErrorEmptyFields;
+        
+        /// <summary>
+        /// LabelErrorUserExists control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelErrorUserExists;
     }
 }

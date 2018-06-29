@@ -6,12 +6,13 @@
     Username: <asp:TextBox runat="server" ID="TextBoxUsername"/><br />
     Password: <asp:TextBox runat="server" ID="TextBoxPassword" /><br />
     WalletAddress: <br/>
-    <asp:TextBox runat="server" TextMode="MultiLine" Rows="1" Columns="80"/>
-    <asp:Label runat="server" ID="LabelError" Text="Error! Password or username is incorrect" Visible="False"></asp:Label> <br/>
+    <asp:TextBox runat="server" TextMode="MultiLine" Rows="1" Columns="80" ID="TextBoxWalletAddress"/>
+    <asp:Label runat="server" ID="LabeErrorEmptyFields" Text="Error! Username or Password not set" Visible="False"></asp:Label> <br/>
+    <asp:Label runat="server" ID="LabelErrorUserExists" Text="Error! User exists already" Visible="False"></asp:Label> <br/>
 
     <asp:Button runat="server" OnClick="OnClick" Text="Submit"/>
 
-    <<%--table>
+    <%--<table>
         <% 
             foreach (var text in Text)
             {
@@ -22,6 +23,5 @@
         %>
     </table>--%>
     
-<asp:Label Text="" runat="server"></asp:Label>
 <!-- Test Test-->
 </asp:Content>
