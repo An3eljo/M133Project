@@ -26,14 +26,17 @@ namespace M133Project
                 var user = db.User.First(use => use.Username == username);
                 if (user.Password != password)
                 {
-                    //throw;
+                    LabelError.Visible = true;
+                    TextBoxPassword.Text = String.Empty;
+                    return;
                 }
 
                 Session.Add("username", user);
             }
             catch (Exception )
             {
-                
+                LabelError.Visible = true;
+                TextBoxPassword.Text = String.Empty;
             }
         }
 

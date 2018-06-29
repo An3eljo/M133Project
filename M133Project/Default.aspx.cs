@@ -16,7 +16,6 @@ namespace M133Project
         {
             var db = new M133_GoInternationalEntities1();
             Products = db.Product.ToList();
-            var t = 0;
 
 
             //var product = new Product();

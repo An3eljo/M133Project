@@ -5,6 +5,7 @@
     <label>Login</label>
     Nutzername: <asp:TextBox runat="server" ID="TextBoxUsername"/><br />
     Passwort: <asp:TextBox runat="server" ID="TextBoxPassword" /><br />
+    <asp:Label runat="server" ID="LabelError" Text="Error! Password or username is incorrect" Visible="False"></asp:Label> <br/>
 
     <asp:Button runat="server" OnClick="Submit_OnClick" Text="Submit"/>
 
