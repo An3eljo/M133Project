@@ -32,13 +32,11 @@ namespace M133Project
         //           + DateTime.Now.ToString();
         //}
 
-        private void SetUp()
+        protected void OnProductClick(object sender, EventArgs e)
         {
-            var db = new M133_GoInternationalEntities1();
-            foreach (var product in db.Product)
-            {
-                Products.Add(product);
-            }
+            //todo: set id
+            var id = 0;
+            Response.Redirect($"ProductDetails.aspx/?id={id}");
         }
     }
 }

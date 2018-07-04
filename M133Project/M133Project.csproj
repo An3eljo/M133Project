@@ -197,6 +197,8 @@
     </Content>
     <Content Include="HomePage.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="ProductDetails.aspx" />
+    <Content Include="Profile.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="RegisterProduct.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -294,6 +296,20 @@
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>GoInternational.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">

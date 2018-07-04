@@ -11,6 +11,7 @@ namespace M133Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //todo: testingCredentials
             var db = new M133_GoInternationalEntities1();
             var user = db.User.First(x => x.Id == 3);
             Session["user"] = user;
