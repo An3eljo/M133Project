@@ -16,47 +16,7 @@ namespace M133Project
         {
             var db = new M133_GoInternationalEntities1();
             Products = db.Product.ToList();
-
-
-            //var product = new Product();
-
-            //var user = new User();
-            //user.Product = new List<Product>();
-            //user.Username = "user1";
-            //user.Password = "user1";
-            //product.Id = 1;
-
-            //product.Description = "description1";
-            //product.Id = 1;
-            //product.Price = 24.5F;
-            //product.Quantity = 586.78F;
-            //product.Seller = 1;
-            //product.Name = "Luan";
-
-            //user.Product.Add(product);
-
-            //var db = new M133_GoInternationalEntities1();
-            //db.Product.Add(product);
-            //db.User.Add(user);
-            //db.SaveChanges();   
-
-            //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            //builder.DataSource = "andrischool.database.windows.net,1433";
-            //builder.UserID = "andrijoos";
-            //builder.Password = "Andrielia99";
-
-            //using (var connection = new SqlConnection(builder.ConnectionString))
-            //{
-            //    connection.Open();
-            //}
-
-            //MySqlConnection connection = new MySqlConnection("server=localhost;Port=3306;database=test0;uid=root;SslMode=0;password=");
-
-            ////open the connection
-            //connection.Open();
-
-            ////close the connection
-            //connection.Close();
+            
         }
 
         //protected void OnClick(object sender, EventArgs e)

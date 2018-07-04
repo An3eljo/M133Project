@@ -31,13 +31,14 @@ namespace M133Project
                     return;
                 }
 
-                Session.Add("username", user);
+                Session.Add("user", user);
             }
             catch (Exception )
             {
                 LabelError.Visible = true;
-                TextBoxPassword.Text = String.Empty;
             }
+
+            TextBoxPassword.Text = String.Empty;
         }
 
         [WebMethod]

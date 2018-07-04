@@ -17,8 +17,7 @@ namespace M133Project
         protected void OnClick(object sender, EventArgs e)
         {
             var db = new M133_GoInternationalEntities1();
-
-
+            
             var username = TextBoxUsername.Text;
             var password = TextBoxPassword.Text;
             var wallettAddress = TextBoxWalletAddress.Text;
