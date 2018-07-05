@@ -18,5 +18,17 @@ namespace M133Project
             var product = db.Product.First(prd => prd.Id == productId);
             this.Product = product;
         }
+
+        protected void OnBuyClick(object sender, EventArgs e)
+        {
+
+            if (Session["shoppingCart"] == null)
+            {
+                Session["shoppingCart"] = new List<Product>();
+            }
+
+            //todo: 
+            //((List<Product>)Session["shoppingCart"]).Add(currentProduct);
+        }
     }
 }

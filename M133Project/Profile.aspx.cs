@@ -9,13 +9,38 @@ namespace M133Project
 {
     public partial class Profile : System.Web.UI.Page
     {
-        public User User;
+        public User CurrentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
             //todo: errorhandling
             var currentUser = (User) Session["user"];
 
-            this.User = currentUser;
+            this.CurrentUser = currentUser;
+        }
+
+        protected void OnSafeClick(object sender, EventArgs e)
+        {
+            //todo: errorhandling
+            var db = new M133_GoInternationalEntities1();
+            var currentUser = (User)Session["user"];
+
+            //todo: html
+            //if (Username != currentUser.Username)
+            //{
+            //    db.User.First(usr => usr.Id == currentUser.Id).Username = Username;
+            //}
+
+            //if (Password != currentUser.Password)
+            //{
+            //    db.User.First(usr => usr.Id == currentUser.Id).Password = Password;
+            //}
+
+            //if (WalletAddress != currentUser.WalletAddress)
+            //{
+            //    db.User.First(usr => usr.Id == currentUser.Id).WalletAddress = WalletAddress;
+            //}
+
+            db.SaveChanges();
         }
     }
 }

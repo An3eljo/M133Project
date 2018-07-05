@@ -45,8 +45,15 @@ namespace M133Project
                 Seller = currentUser.Id
             };
 
+            AddProductToUser(newProduct, currentUser, db);
+
             db.Product.Add(newProduct);
             db.SaveChanges();
+        }
+
+        private void AddProductToUser(Product product, User user, M133_GoInternationalEntities1 db)
+        {
+            db.User.Find(user).Product.Add(product);
         }
     }
 }
