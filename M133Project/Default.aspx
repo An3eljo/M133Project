@@ -50,12 +50,12 @@
    <p>Unsere Produkte:</p>
 
    <table>
-       <tr><th>Name</th><th>Preis</th><th>Menge</th></tr>
+       <tr><th>Name</th><th>Price</th><th>Quantity</th></tr>
         <%
-            for (int i = 1; i <= Products.Count; i++)
+            for (int i = 0; i < Products.Count; i++)
             {
                 %>
-                    <tr><td><a href="ProductDetails.aspx/?id=<%=i %>"><%= Products[i].Name%></a></td><td><%= Products[i].Price %></td> <td><%= Products[i].Quantity %></td></tr>
+                    <tr><td><a href="/ProductDetails.aspx/?id=<%=Products[i].Id %>"><%= Products[i].Name%></a></td><td><%= Products[i].Price %></td> <td><%= Products[i].Quantity %></td></tr>
                 <% 
             }
         %>

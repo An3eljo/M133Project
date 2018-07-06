@@ -10,13 +10,21 @@ namespace M133Project
     public partial class ProductDetails : System.Web.UI.Page
     {
         public Product Product;
+        public User Seller;
         protected void Page_Load(object sender, EventArgs e)
         {
             var productId = int.Parse(Request.QueryString["id"]);
-            
+            Initialize(productId);
+        }
+
+        private void Initialize(int id)
+        {
             var db = new M133_GoInternationalEntities1();
-            var product = db.Product.First(prd => prd.Id == productId);
+            var product = db.Product.First(prd => prd.Id == id);
             this.Product = product;
+
+            var seller = db.User.First(user => product.Seller == user.Id);
+            this.Seller = seller;
         }
 
         protected void OnBuyClick(object sender, EventArgs e)
@@ -27,8 +35,7 @@ namespace M133Project
                 Session["shoppingCart"] = new List<Product>();
             }
 
-            //todo: 
-            //((List<Product>)Session["shoppingCart"]).Add(currentProduct);
+            ((List<Product>)Session["shoppingCart"]).Add(Product);
         }
     }
 }

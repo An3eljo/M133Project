@@ -18,25 +18,5 @@ namespace M133Project
             Products = db.Product.ToList();
             
         }
-
-        //protected void OnClick(object sender, EventArgs e)
-        //{
-        //    Test.Text = "hallo";
-        //}
-
-
-        //[System.Web.Services.WebMethod]
-        //public static string GetCurrentTime(string name)
-        //{
-        //    return "Hello " + name + Environment.NewLine + "The Current Time is: "
-        //           + DateTime.Now.ToString();
-        //}
-
-        protected void OnProductClick(object sender, EventArgs e)
-        {
-            //todo: set id
-            var id = 0;
-            Response.Redirect($"ProductDetails.aspx/?id={id}");
-        }
     }
 }
