@@ -50,12 +50,12 @@
    <p>Unsere Produkte:</p>
 
    <table>
-        <% 
-            foreach (var i in Products)
+       <tr><th>Name</th><th>Preis</th><th>Menge</th></tr>
+        <%
+            for (int i = 1; i <= Products.Count; i++)
             {
                 %>
-                    <tr><th>Name</th><th>Preis</th><th>Menge</th></tr>
-                    <tr><td><%= i.Name%></td><td><%= i.Price %></td> <td><%= i.Quantity %></td></tr>
+                    <tr><td><a href="ProductDetails.aspx/?id=<%=i %>"><%= Products[i].Name%></a></td><td><%= Products[i].Price %></td> <td><%= Products[i].Quantity %></td></tr>
                 <% 
             }
         %>
