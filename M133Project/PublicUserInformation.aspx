@@ -9,10 +9,10 @@
     <table>
        <tr><th>Name</th><th>Price</th><th>Quantity</th></tr>
         <%
-            for (int i = 0; i < ProductsFromUser.Count; i++)
+            foreach (var product in ProductsFromUser)
             {
                 %>
-                    <tr><td><a href="/ProductDetails.aspx/?id=<%=ProductsFromUser[i].Id %>"><%= ProductsFromUser[i].Name %></a></td><td><%= ProductsFromUser[i].Price %></td> <td><%= ProductsFromUser[i].Quantity %></td></tr>
+                    <tr><td><a href="/ProductDetails.aspx/?id=<%=product.Id %>"><%= product.Name %></a></td><td><%= product.Price %></td> <td><%= product.Quantity %></td></tr>
                 <% 
             }
         %>

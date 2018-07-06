@@ -29,13 +29,17 @@ namespace M133Project
 
         protected void OnBuyClick(object sender, EventArgs e)
         {
-
             if (Session["shoppingCart"] == null)
             {
                 Session["shoppingCart"] = new List<Product>();
             }
 
             ((List<Product>)Session["shoppingCart"]).Add(Product);
+
+            var currentUrl = Request.Url.PathAndQuery;
+            var redirectUrl = Server.UrlEncode(currentUrl);
+
+            Response.Redirect($"/ShoppingCart.aspx/?redirectUrl={currentUrl}");
         }
     }
 }

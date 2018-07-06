@@ -47,15 +47,15 @@
     </script>--%>
    <br />
    <h1><b>Silkroad</b></h1>
-   <p>Unsere Produkte:</p>
+   <p>Newest Products:</p>
 
    <table>
        <tr><th>Name</th><th>Price</th><th>Quantity</th></tr>
         <%
-            for (int i = 0; i < Products.Count; i++)
+            foreach (var product in Products)
             {
                 %>
-                    <tr><td><a href="/ProductDetails.aspx/?id=<%=Products[i].Id %>"><%= Products[i].Name%></a></td><td><%= Products[i].Price %></td> <td><%= Products[i].Quantity %></td></tr>
+                    <tr><td><a href="/ProductDetails.aspx/?id=<%=product.Id %>"><%= product.Name%></a></td><td><%= product.Price %></td> <td><%= product.Quantity %></td></tr>
                 <% 
             }
         %>

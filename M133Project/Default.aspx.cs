@@ -15,8 +15,8 @@ namespace M133Project
         protected void Page_Load(object sender, EventArgs e)
         {
             var db = new M133_GoInternationalEntities1();
-            Products = db.Product.ToList();
-            
+            var products = db.Product.ToList().OrderByDescending(prd => prd.Id).ToList();
+            Products = products;
         }
     }
 }
