@@ -37,7 +37,6 @@ namespace M133Project
             ((List<Product>)Session["shoppingCart"]).Add(Product);
 
             var currentUrl = Request.Url.PathAndQuery;
-            var redirectUrl = Server.UrlEncode(currentUrl);
 
             Response.Redirect($"/ShoppingCart.aspx/?redirectUrl={currentUrl}");
         }

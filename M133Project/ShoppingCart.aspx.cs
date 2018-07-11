@@ -10,7 +10,7 @@ namespace M133Project
     public partial class ShoppingCart : System.Web.UI.Page
     {
         //todo: sql database login with session id
-        public List<Product> ShoppingCardFromUser;
+        private List<Product> ShoppingCardFromUser;
         private string redirectUrl;
         protected void Page_Load(object sender, EventArgs e)
         {

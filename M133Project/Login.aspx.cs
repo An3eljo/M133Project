@@ -10,9 +10,13 @@ namespace M133Project
 {
     public partial class Login : System.Web.UI.Page
     {
+        private string RedirectUrl;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Timeout = 10;
+            if (Request.QueryString["redirectUrl"] != null)
+            {
+                RedirectUrl = Server.UrlDecode(Request.QueryString["redirectUrl"]);
+            }
         }
 
         protected void Submit_OnClick(object sender, EventArgs e)
@@ -32,6 +36,8 @@ namespace M133Project
                 }
 
                 Session.Add("user", user);
+                Session.Timeout = 20;
+                Response.Redirect(RedirectUrl);
             }
             catch (Exception )
             {
@@ -39,12 +45,6 @@ namespace M133Project
             }
 
             TextBoxPassword.Text = String.Empty;
-        }
-
-        [WebMethod]
-        public static string OnLoginClick(string name)
-        {
-            return "hello" + name;
         }
     }
     
