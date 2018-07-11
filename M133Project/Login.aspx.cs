@@ -37,7 +37,7 @@ namespace M133Project
 
                 Session.Add("user", user);
                 Session.Timeout = 20;
-                Response.Redirect(RedirectUrl);
+                Response.Redirect(RedirectUrl ?? "/Default.aspx");
             }
             catch (Exception )
             {

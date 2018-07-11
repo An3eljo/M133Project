@@ -9,9 +9,13 @@ namespace M133Project
 {
     public partial class Register : System.Web.UI.Page
     {
+        private string RedirectUrl;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Request.QueryString["redirectUrl"] != null)
+            {
+                RedirectUrl = Server.UrlDecode(Request.QueryString["redirectUrl"]);
+            }
         }
 
         protected void OnClick(object sender, EventArgs e)
@@ -44,7 +48,15 @@ namespace M133Project
 
                 db.User.Add(user);
                 db.SaveChanges();
-                
+
+                if (RedirectUrl != null)
+                {
+                    Response.Redirect(RedirectUrl);
+                }
+                else
+                {
+                    Response.Redirect("/Default.aspx");
+                }
             }
             else
             {
