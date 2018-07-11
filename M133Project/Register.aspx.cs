@@ -49,14 +49,7 @@ namespace M133Project
                 db.User.Add(user);
                 db.SaveChanges();
 
-                if (RedirectUrl != null)
-                {
-                    Response.Redirect(RedirectUrl);
-                }
-                else
-                {
-                    Response.Redirect("/Default.aspx");
-                }
+                Response.Redirect(RedirectUrl ?? "/Default.aspx");
             }
             else
             {

@@ -24,6 +24,7 @@ namespace M133Project
         public string Username { get; set; }
         public string Password { get; set; }
         public string WalletAddress { get; set; }
+        public string SessionId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Product { get; set; }

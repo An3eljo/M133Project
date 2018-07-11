@@ -25,6 +25,7 @@
           <Property Name="Username" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="WalletAddress" Type="varchar(max)" />
+          <Property Name="SessionId" Type="varchar" MaxLength="255" />
         </EntityType>
         <Association Name="FK_Product_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -60,7 +61,7 @@
           <Property Name="Price" Type="Single" Nullable="false" />
           <Property Name="Quantity" Type="Single" Nullable="false" />
           <Property Name="Seller" Type="Int32" Nullable="false" />
-          <Property Name="AdditionTime" Type="Binary" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="AdditionTime" Type="Binary" Nullable="false" annotation:StoreGeneratedPattern="Computed" MaxLength="8" FixedLength="true" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -71,6 +72,7 @@
           <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="WalletAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Product" Relationship="Self.FK_Product_User" FromRole="User" ToRole="Product" />
+          <Property Name="SessionId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Product_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -114,6 +116,7 @@
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="M133_GoInternationalModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />

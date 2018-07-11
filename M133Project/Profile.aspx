@@ -2,6 +2,8 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     
-    <%-- todo --%>
+    Username: <asp:TextBox runat="server" ID="TextBoxUsername"/>
+    Password: <asp:TextBox runat="server" ID="TextBoxPassword"/>
+    Walletaddress: <asp:TextBox runat="server" ID="TextBoxWalletAddress"/>
 
 </asp:Content>

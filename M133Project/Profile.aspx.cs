@@ -24,21 +24,24 @@ namespace M133Project
             var db = new M133_GoInternationalEntities1();
             var currentUser = (User)Session["user"];
 
-            //todo: html
-            //if (Username != currentUser.Username)
-            //{
-            //    db.User.First(usr => usr.Id == currentUser.Id).Username = Username;
-            //}
+            var username = TextBoxUsername.Text;
+            var password = TextBoxPassword.Text;
+            var walletaddress = TextBoxWalletAddress.Text;
 
-            //if (Password != currentUser.Password)
-            //{
-            //    db.User.First(usr => usr.Id == currentUser.Id).Password = Password;
-            //}
+            if (username != currentUser.Username)
+            {
+                db.User.First(usr => usr.Id == currentUser.Id).Username = username;
+            }
 
-            //if (WalletAddress != currentUser.WalletAddress)
-            //{
-            //    db.User.First(usr => usr.Id == currentUser.Id).WalletAddress = WalletAddress;
-            //}
+            if (password != currentUser.Password)
+            {
+                db.User.First(usr => usr.Id == currentUser.Id).Password = password;
+            }
+
+            if (walletaddress != currentUser.WalletAddress)
+            {
+                db.User.First(usr => usr.Id == currentUser.Id).WalletAddress = walletaddress;
+            }
 
             db.SaveChanges();
         }
