@@ -12,8 +12,9 @@ namespace M133Project
         public User CurrentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
+            var db = new M133_GoInternationalEntities1();
             //todo: errorhandling
-            var currentUser = (User) Session["user"];
+            var currentUser = db.User.First(usr => usr.SessionId == Session.SessionID);
 
             this.CurrentUser = currentUser;
         }
@@ -22,7 +23,7 @@ namespace M133Project
         {
             //todo: errorhandling
             var db = new M133_GoInternationalEntities1();
-            var currentUser = (User)Session["user"];
+            var currentUser = db.User.First(usr => usr.SessionId == Session.SessionID);
 
             var username = TextBoxUsername.Text;
             var password = TextBoxPassword.Text;

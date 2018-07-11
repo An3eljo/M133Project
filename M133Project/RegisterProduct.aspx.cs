@@ -31,7 +31,7 @@ namespace M133Project
             var description = TextBoxDescription.Text;
 
             //todo: errorhandling
-            var currentUser = (User)Session["user"];
+            var currentUser = db.User.First(usr => usr.SessionId == Session.SessionID);
 
             var newProduct = new Product
             {

@@ -35,8 +35,12 @@ namespace M133Project
                     return;
                 }
 
-                Session.Add("user", user);
                 Session.Timeout = 20;
+
+                db.User.First(usr => usr.Username == username && usr.Password == password).SessionId =
+                    Session.SessionID;
+                db.SaveChanges();
+
                 Response.Redirect(RedirectUrl ?? "/Default.aspx");
             }
             catch (Exception )
