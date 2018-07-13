@@ -48,7 +48,7 @@
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">Application name</a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse, hvr-back-pulse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Default.aspx">Home</a></li>
                         <li><a href="<%= CurrentUrlLogin %>"> <%=Username %></a>
