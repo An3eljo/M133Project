@@ -51,9 +51,6 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Default.aspx">Home</a></li>
-                        <%
-                            var url = Request.Url.PathAndQuery;
-                        %>
                         <li><a href="<%= CurrentUrlLogin %>"> <%=Username %></a></li>
                             <ul>
                                 <li><a href="/RegisterProduct.aspx">Add Product</a></li>
