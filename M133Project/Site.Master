@@ -54,7 +54,8 @@
                         <li><a href="<%= CurrentUrlLogin %>"> <%=Username %></a></li>
                             <ul>
                                 <li><a href="/RegisterProduct.aspx">Add Product</a></li>
-                                <li><a href="/RegisterProduct.aspx">Edit Profile</a></li>
+                                <li><a href="/Profile.aspx">Edit Profile</a></li>
+                                <li><a href="/ShoppingCart.aspx">Shopping Cart</a></li>
                                 <li><a href="/Logout.aspx">Logout</a></li>
                             </ul>
                         <li><a href="<%= CurrentUrlRegister %>">Register</a></li>
