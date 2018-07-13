@@ -194,6 +194,7 @@
       <LastGenOutput>GoInternational.cs</LastGenOutput>
     </Content>
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="PublicUserInformation.aspx" />
@@ -271,6 +272,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>GoInternational.tt</DependentUpon>
