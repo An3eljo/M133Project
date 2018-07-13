@@ -40,6 +40,7 @@ namespace M133Project
                 db.User.First(usr => usr.Username == username && usr.Password == password).SessionId =
                     Session.SessionID;
                 db.SaveChanges();
+                SiteMaster.Username = username;
 
                 Response.Redirect(RedirectUrl ?? "/Default.aspx");
             }
