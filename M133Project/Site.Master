@@ -51,13 +51,14 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Default.aspx">Home</a></li>
-                        <li><a href="<%= CurrentUrlLogin %>"> <%=Username %></a></li>
+                        <li><a href="<%= CurrentUrlLogin %>"> <%=Username %></a>
                             <ul>
                                 <li><a href="/RegisterProduct.aspx">Add Product</a></li>
                                 <li><a href="/Profile.aspx">Edit Profile</a></li>
                                 <li><a href="/ShoppingCart.aspx">Shopping Cart</a></li>
                                 <li><a href="/Logout.aspx">Logout</a></li>
                             </ul>
+                        </li>
                         <li><a href="<%= CurrentUrlRegister %>">Register</a></li>
                     </ul>
                 </div>
@@ -68,7 +69,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Andri Joos, Luan Looser</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Andri Joos only</p>
             </footer>
         </div>
 
