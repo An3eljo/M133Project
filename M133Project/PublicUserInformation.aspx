@@ -5,14 +5,13 @@
     <h2><%= CurrentUser.Username %></h2>
     <br/>
     <br/>
-    <br/>
     <table>
-       <tr><th>Name</th><th>Price</th><th>Quantity</th></tr>
+       <tr><th>Name</th><th>&nbsp;&nbsp;&nbsp;</th><th>Price</th><th>&nbsp;&nbsp;&nbsp;</th><th>Quantity</th></tr>
         <%
             foreach (var product in ProductsFromUser)
             {
                 %>
-                    <tr><td><a href="/ProductDetails.aspx/?id=<%=product.Id %>"><%= product.Name %></a></td><td><%= product.Price %></td> <td><%= product.Quantity %></td></tr>
+                    <tr><td><a href="/ProductDetails.aspx/?id=<%=product.Id %>"><%= product.Name %></a></td><td>&nbsp;&nbsp;&nbsp;</td><td><%= product.Price %></td><td>&nbsp;&nbsp;&nbsp;</td><td><%= product.Quantity %></td></tr>
                 <% 
             }
         %>
