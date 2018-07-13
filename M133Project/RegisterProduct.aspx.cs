@@ -11,7 +11,15 @@ namespace M133Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //try
+            //{
+            //    var db = new M133_GoInternationalEntities1();
+            //    var user = db.User.First(usr => usr.SessionId == Session.SessionID);
+            //}
+            //catch (Exception)
+            //{
+            //    Response.Redirect("/Default.aspx");
+            //}
         }
 
         protected void OnClick(object sender, EventArgs e)

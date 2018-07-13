@@ -12,7 +12,7 @@ namespace M133Project
         protected void Page_Load(object sender, EventArgs e)
         {
             var db = new M133_GoInternationalEntities1();
-            db.User.First(usr => usr.SessionId == Session.SessionID).SessionId = null;
+            db.User.First(usr => usr.SessionId == Session.SessionID).SessionId = String.Empty;
             db.SaveChanges();
 
             Session.Clear();

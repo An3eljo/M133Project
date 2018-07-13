@@ -51,14 +51,11 @@
                 <div class="navbar-collapse collapse, hvr-back-pulse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Default.aspx">Home</a></li>
-                        <li><a href="<%= CurrentUrlLogin %>"> <%=Username %></a>
-                            <ul>
-                                <li><a href="/RegisterProduct.aspx">Add Product</a></li>
-                                <li><a href="/Profile.aspx">Edit Profile</a></li>
-                                <li><a href="/ShoppingCart.aspx">Shopping Cart</a></li>
-                                <li><a href="/Logout.aspx">Logout</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="<%= CurrentUrlLogin %>"> <%=Username %></a></li>
+                        <li class="navbar1"><a href="/RegisterProduct.aspx">Add Product</a></li>
+                        <li class="navbar1"><a href="/Profile.aspx">Edit Profile</a></li>
+                        <li class="navbar1"><a href="/ShoppingCart.aspx">Shopping Cart</a></li>
+                        <li class="navbar1"><a href="/Logout.aspx">Logout</a></li>
                         <li><a href="<%= CurrentUrlRegister %>">Register</a></li>
                     </ul>
                 </div>
