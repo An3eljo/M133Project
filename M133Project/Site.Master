@@ -68,7 +68,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Andri Joos</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Andri Joos, Luan Looser</p>
             </footer>
         </div>
 
