@@ -42,8 +42,9 @@ namespace M133Project
 
                 Session.Timeout = 20;
 
+                Data.SessionId = Session.SessionID;
                 db.User.First(usr => usr.Username == username && usr.Password == password).SessionId =
-                    Session.SessionID;
+                    Data.SessionId;
                 db.SaveChanges();
                 SiteMaster.Username = username;
 

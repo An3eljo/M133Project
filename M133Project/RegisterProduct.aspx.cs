@@ -14,7 +14,7 @@ namespace M133Project
             //try
             //{
             //    var db = new M133_GoInternationalEntities1();
-            //    var user = db.User.First(usr => usr.SessionId == Session.SessionID);
+            //    var user = db.User.First(usr => usr.SessionId == Data.SessionId);
             //}
             //catch (Exception)
             //{
@@ -39,7 +39,7 @@ namespace M133Project
             var description = TextBoxDescription.Text;
 
             //todo: errorhandling
-            var currentUser = db.User.First(usr => usr.SessionId == Session.SessionID);
+            var currentUser = db.User.First(usr => usr.SessionId == Data.SessionId);
 
             var newProduct = new Product
             {
