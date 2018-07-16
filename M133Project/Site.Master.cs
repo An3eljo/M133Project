@@ -9,6 +9,7 @@ namespace M133Project
 {
     public partial class SiteMaster : MasterPage
     {
+        public static string Username;
         protected void Page_Load(object sender, EventArgs e)
         {
 
