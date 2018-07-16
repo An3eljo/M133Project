@@ -11,7 +11,15 @@ namespace M133Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //try
+            //{
+            //    var db = new M133_GoInternationalEntities1();
+            //    var user = db.User.First(usr => usr.SessionId == Data.SessionId);
+            //}
+            //catch (Exception)
+            //{
+            //    Response.Redirect("/Default.aspx");
+            //}
         }
 
         protected void OnClick(object sender, EventArgs e)
@@ -31,7 +39,7 @@ namespace M133Project
             var description = TextBoxDescription.Text;
 
             //todo: errorhandling
-            var currentUser = db.User.First(usr => usr.SessionId == Session.SessionID);
+            var currentUser = db.User.First(usr => usr.SessionId == Data.SessionId);
 
             var newProduct = new Product
             {

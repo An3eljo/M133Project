@@ -3,16 +3,11 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     
     <h2><%= Product.Name %></h2>
-    <br/>
-    <br/>
-    <br/>
-    <a href="/PublicUserInformation.aspx/?id=<%=Seller.Id %>"><h4><%= Seller.Username %></h4></a>
-    <br/>
-    <br/>
-    <h3>Description</h3>
     <label><%= Product.Description %></label>
     <br/>
+    Verkäufer: <a href="/PublicUserInformation.aspx/?id=<%=Seller.Id %>"><h4><%= Seller.Username %></h4></a>
     <br/>
+    
     Price: <label><%= Product.Price %></label>
     <br/>
     Quantity: <label><%= Product.Quantity %></label>

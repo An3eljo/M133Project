@@ -13,6 +13,11 @@ namespace M133Project
         private string RedirectUrl;
         protected void Page_Load(object sender, EventArgs e)
         {
+            var db = new M133_GoInternationalEntities1();
+            var user = new User();
+            user.Username = "slfhls";
+            user.Password = "lsfhalshfa";
+
             if (Request.QueryString["redirectUrl"] != null)
             {
                 RedirectUrl = Server.UrlDecode(Request.QueryString["redirectUrl"]);
@@ -37,9 +42,11 @@ namespace M133Project
 
                 Session.Timeout = 20;
 
+                Data.SessionId = Session.SessionID;
                 db.User.First(usr => usr.Username == username && usr.Password == password).SessionId =
-                    Session.SessionID;
+                    Data.SessionId;
                 db.SaveChanges();
+                SiteMaster.Username = username;
 
                 Response.Redirect(RedirectUrl ?? "/Default.aspx");
             }
