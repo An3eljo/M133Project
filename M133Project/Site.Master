@@ -48,11 +48,15 @@
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">Application name</a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse, hvr-back-pulse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Default.aspx">Home</a></li>
-                        <li><a runat="server" href="~/Login.aspx/?redirectUrl=<% Request.Url.PathAndQuery.ToString(); %>">Login</a></li>
-                        <li><a runat="server" href="~/Register.aspx/?redirectUrl=<% Request.Url.PathAndQuery.ToString(); %>">Register</a></li>
+                        <li><a href="<%= CurrentUrlLogin %>"> <%=Username %></a></li>
+                        <li class="navbar1"><a href="/RegisterProduct.aspx">Add Product</a></li>
+                        <li class="navbar1"><a href="/Profile.aspx">Edit Profile</a></li>
+                        <li class="navbar1"><a href="/ShoppingCart.aspx">Shopping Cart</a></li>
+                        <li class="navbar1"><a href="/Logout.aspx">Logout</a></li>
+                        <li><a href="<%= CurrentUrlRegister %>">Register</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +66,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Andri Joos only</p>
             </footer>
         </div>
 
